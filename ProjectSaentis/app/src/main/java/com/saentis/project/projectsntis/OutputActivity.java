@@ -29,19 +29,8 @@ public class OutputActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_output);
 
-/*
+
         Intent intent = getIntent();
-<<<<<<< HEAD
-        cingr[0] = intent.getStringExtra(inputOne);
-        cingr[1] = intent.getStringExtra(inputTwo);
-        cingr[2] = intent.getStringExtra(inputThree);
-        cingr[3] = intent.getStringExtra(inputFour);
-        cingr[4] = intent.getStringExtra(inputFive);
-        cingr[5] = intent.getStringExtra(inputSix);
-        cingr[6] = intent.getStringExtra(inputSeven);
-        cingr[7] = intent.getStringExtra(inputEight);
-*/
-=======
         cingr[0] = intent.getStringExtra(INPUT_INGREDIENT1);
         cingr[1] = intent.getStringExtra(INPUT_INGREDIENT2);
         cingr[2] = intent.getStringExtra(INPUT_INGREDIENT3);
@@ -51,19 +40,18 @@ public class OutputActivity extends AppCompatActivity {
         cingr[6] = intent.getStringExtra(INPUT_INGREDIENT7);
         cingr[7] = intent.getStringExtra(INPUT_INGREDIENT8);
 
->>>>>>> origin/master
         listView = (ListView) findViewById(R.id.outputListView);
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listViewData);
         listView.setAdapter(adapter);
     }
 
-/*
+
     public boolean testrecipe(int id)   {
-        if(((rpdb.gericht.get(id).getIngredient(0) == cingr[0] || rpdb.gericht.get(id).getIngredient(0) == cingr[1] || rpdb.gericht.get(id).getIngredient(0) == cingr[2] || rpdb.gericht.get(id).getIngredient(0) == cingr[3] ) && (rpdb.gericht.get(id).getIngredient(1) == cingr[0] || rpdb.gericht.get(id).getIngredient(1) == cingr[1] || rpdb.gericht.get(id).getIngredient(2) == cingr[2] || rpdb.gericht.get(id).getIngredient(1) == cingr[3]) && (rpdb.gericht.get(id).getIngredient(2) == cingr[0] || rpdb.gericht.get(id).getIngredient(2) ==cingr[1] || rpdb.gericht.get(id).getIngredient(2) == cingr[3]) && (rpdb.gericht.get(id).getIngredient(3) == cingr[0] || rpdb.gericht.get(id).getIngredient(3) == cingr[1] || rpdb.gericht.get(id).getIngredient(3) == cingr[2] || rpdb.gericht.get(id).getIngredient(3) == cingr[3])))   {
+        if(((rpdb.gerichtliste.get(id).getIngredient(0) == cingr[0] || rpdb.gerichtliste.get(id).getIngredient(0) == cingr[1] || rpdb.gerichtliste.get(id).getIngredient(0) == cingr[2] || rpdb.gerichtliste.get(id).getIngredient(0) == cingr[3] ) && (rpdb.gerichtliste.get(id).getIngredient(1) == cingr[0] || rpdb.gerichtliste.get(id).getIngredient(1) == cingr[1] || rpdb.gerichtliste.get(id).getIngredient(2) == cingr[2] || rpdb.gerichtliste.get(id).getIngredient(1) == cingr[3]) && (rpdb.gerichtliste.get(id).getIngredient(2) == cingr[0] || rpdb.gerichtliste.get(id).getIngredient(2) ==cingr[1] || rpdb.gerichtliste.get(id).getIngredient(2) == cingr[3]) && (rpdb.gerichtliste.get(id).getIngredient(3) == cingr[0] || rpdb.gerichtliste.get(id).getIngredient(3) == cingr[1] || rpdb.gerichtliste.get(id).getIngredient(3) == cingr[2] || rpdb.gerichtliste.get(id).getIngredient(3) == cingr[3])))   {
             return true;
         }
         else    {
             return false;
         }
-    }*/
+    }
 }
