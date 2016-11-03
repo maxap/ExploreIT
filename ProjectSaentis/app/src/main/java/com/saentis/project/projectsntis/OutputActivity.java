@@ -6,6 +6,15 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import static com.saentis.project.projectsntis.SelectionActivity.INPUT_INGREDIENT1;
+import static com.saentis.project.projectsntis.SelectionActivity.INPUT_INGREDIENT2;
+import static com.saentis.project.projectsntis.SelectionActivity.INPUT_INGREDIENT3;
+import static com.saentis.project.projectsntis.SelectionActivity.INPUT_INGREDIENT4;
+import static com.saentis.project.projectsntis.SelectionActivity.INPUT_INGREDIENT5;
+import static com.saentis.project.projectsntis.SelectionActivity.INPUT_INGREDIENT6;
+import static com.saentis.project.projectsntis.SelectionActivity.INPUT_INGREDIENT7;
+import static com.saentis.project.projectsntis.SelectionActivity.INPUT_INGREDIENT8;
+
 public class OutputActivity extends AppCompatActivity {
     Init rpdb = new Init(); //recipedatabse
     String cingr[];
