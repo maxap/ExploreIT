@@ -22,14 +22,14 @@ public class OutputActivity extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        cingr[0] = intent.getStringExtra(inputOne);
-        cingr[1] = intent.getStringExtra(inputTwo);
-        cingr[2] = intent.getStringExtra(inputThree);
-        cingr[3] = intent.getStringExtra(inputFour);
-        cingr[4] = intent.getStringExtra(inputFive);
-        cingr[5] = intent.getStringExtra(inputSix);
-        cingr[6] = intent.getStringExtra(inputSeven);
-        cingr[7] = intent.getStringExtra(inputEight);
+        cingr[0] = intent.getStringExtra(INPUT_INGREDIENT1);
+        cingr[1] = intent.getStringExtra(INPUT_INGREDIENT2);
+        cingr[2] = intent.getStringExtra(INPUT_INGREDIENT3);
+        cingr[3] = intent.getStringExtra(INPUT_INGREDIENT4);
+        cingr[4] = intent.getStringExtra(INPUT_INGREDIENT5);
+        cingr[5] = intent.getStringExtra(INPUT_INGREDIENT6);
+        cingr[6] = intent.getStringExtra(INPUT_INGREDIENT7);
+        cingr[7] = intent.getStringExtra(INPUT_INGREDIENT8);
 
         listView = (ListView) findViewById(R.id.outputListView);
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listViewData);
