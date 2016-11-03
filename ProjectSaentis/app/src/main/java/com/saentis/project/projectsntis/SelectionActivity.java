@@ -40,17 +40,26 @@ public class SelectionActivity extends AppCompatActivity {
     public static final String INPUT_INGREDIENT2 = "ProjectSaentis.INPUT_INGREDIENT2";
     public static final String INPUT_INGREDIENT3 = "ProjectSaentis.INPUT_INGREDIENT3";
     public static final String INPUT_INGREDIENT4 = "ProjectSaentis.INPUT_INGREDIENT4";
+    public static final String INPUT_INGREDIENT5 = "ProjectSaentis.INPUT_INGREDIENT1";
+    public static final String INPUT_INGREDIENT6 = "ProjectSaentis.INPUT_INGREDIENT2";
+    public static final String INPUT_INGREDIENT7 = "ProjectSaentis.INPUT_INGREDIENT3";
+
+    String input
 
     public void goToOutput(View view)  {
         Intent intent = new Intent(this, OutputActivity.class);
-        String inputOne = ioOne.getText().toString();
-        String inputTwo = ioTwo.getText().toString();
-        String inputThree = ioThree.getText().toString();
-        String inputFour = ioFour.getText().toString();
+        inputOne = ioOne.getText().toString();
+        inputTwo = ioTwo.getText().toString();
+        inputThree = ioThree.getText().toString();
+        inputFour = ioFour.getText().toString();
         intent.putExtra(INPUT_INGREDIENT1, inputOne);
-        intent.putExtra(INPUT_INGREDIENT2, inputTwo);
+        intent.putExtra(INPUT_INGREDIENT2, inputTwo);               // theoretisch: in for-Scheife packen, INGREDIENT durch i ersetzen, mmittels i.toString()  sollte doch funktionieren?!
         intent.putExtra(INPUT_INGREDIENT3, inputThree);
         intent.putExtra(INPUT_INGREDIENT4, inputFour);
+        intent.putExtra(INPUT_INGREDIENT5, inputFive);
+        intent.putExtra(INPUT_INGREDIENT6, inputSix);               // theoretisch: in for-Scheife packen, INGREDIENT durch i ersetzen, mmittels i.toString()  sollte doch funktionieren?!
+        intent.putExtra(INPUT_INGREDIENT7, inputSeven);
+        intent.putExtra(INPUT_INGREDIENT8, inputEight);
         startActivity(intent);
     }
 }

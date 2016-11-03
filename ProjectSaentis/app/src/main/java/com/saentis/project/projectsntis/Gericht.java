@@ -12,6 +12,7 @@ class Gericht extends RealmObject implements Serializable {
     private int ingredientAmount;
     private String[] ingredients;
     private String description;
+<<<<<<< HEAD
 
 public Gericht(String Gericht, String ingredient1, String ingredient2, String ingredient3, String ingredient4) {
     this.Gericht = Gericht;
@@ -20,6 +21,14 @@ public Gericht(String Gericht, String ingredient1, String ingredient2, String in
     this.ingredients[2] = ingredient3;
     this.ingredients[3] = ingredient4;
 }
+=======
+//test
+    public Gericht(String name, String... ing)	{
+        for(int i = 0; ing.length>i;i++)    {
+
+        }
+    }
+>>>>>>> origin/master
 
     public void newIngredient(String ingredient) {
         ingredients[ingredients.length == 0 ? ingredients.length : 0] = ingredient;
