@@ -9,6 +9,8 @@
     <string name="addReciepe">Rezept hinzufügen</string>
     <string name="outputText">Folgende Geriechte sind mit ihren vorhandenen Zutaten möglich</string>
     <string name="buttenClose">Zurück</string>
+    <string name="saveRecipe">Rezept Speichern</string>
+    <string name="rezeptLink">Link zu Rezept</string>
     <string-array name="ingredients">
         <item>Kartoffeln</item>
         <item>Zwiebeln</item>
