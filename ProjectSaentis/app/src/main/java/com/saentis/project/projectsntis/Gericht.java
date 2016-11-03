@@ -3,7 +3,9 @@ package com.saentis.project.projectsntis;
 
 import java.io.Serializable;
 
-class Gericht  implements Serializable{
+import io.realm.RealmObject;
+
+class Gericht extends RealmObject implements Serializable {
 
     private String Gericht;
     int ingredientAmount;
