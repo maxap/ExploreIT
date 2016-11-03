@@ -8,9 +8,9 @@ import io.realm.RealmObject;
 class Gericht extends RealmObject implements Serializable {
 
     private String Gericht;
-    int ingredientAmount;
-    String[] ingredients;
-    String description;
+    private int ingredientAmount;
+    private String[] ingredients;
+    private String description;
 //test
     public Gericht()	{
 
