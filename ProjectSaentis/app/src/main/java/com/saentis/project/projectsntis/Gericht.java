@@ -1,11 +1,15 @@
 package com.saentis.project.projectsntis;
 
-class Gericht{
+
+import java.io.Serializable;
+
+class Gericht  implements Serializable{
+
     private String Gericht;
     int ingredientAmount;
     String[] ingredients;
     String description;
-
+//test
     public Gericht(String Gericht, String ingredient1, String ingredient2, String ingredient3, String ingredient4)	{
         this.Gericht = Gericht;
         this.ingredients[0] = ingredient1;
@@ -30,7 +34,7 @@ class Gericht{
     public String getGericht()	{
         return Gericht;
     }
-    public String getIngrdient(int ingredientindex)	{
+    public String getIngredient(int ingredientindex)	{
         return ingredients[ingredientindex];
     }
 }
