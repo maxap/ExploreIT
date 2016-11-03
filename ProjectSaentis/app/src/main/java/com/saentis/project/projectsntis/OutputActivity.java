@@ -3,14 +3,23 @@ package com.saentis.project.projectsntis;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class OutputActivity extends AppCompatActivity {
     Init rpdb = new Init(); //recipedatabse
     String cingr[];
+
+    ListView listView;
+    ArrayAdapter<String> adapter;
+    String[] listViewData = {} ; //in diese Liste kommen die möglichen Rezepte
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_output);
+
 
         Intent intent = getIntent();
         cingr[0] = intent.getStringExtra(inputOne);
@@ -22,6 +31,9 @@ public class OutputActivity extends AppCompatActivity {
         cingr[6] = intent.getStringExtra(inputSeven);
         cingr[7] = intent.getStringExtra(inputEight);
 
+        listView = (ListView) findViewById(R.id.outputListView);
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listViewData);
+        listView.setAdapter(adapter);
 
 
     }
