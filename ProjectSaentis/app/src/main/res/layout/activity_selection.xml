@@ -19,28 +19,28 @@
         android:textSize="18sp" />
 
     <AutoCompleteTextView
-        android:text="@string/ingredient1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/autoCompleteTextView1" />
+        android:id="@+id/autoCompleteTextView1"
+        android:hint="@string/ingredient1" />
 
     <AutoCompleteTextView
-        android:text="@string/ingredient2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/autoCompleteTextView2" />
+        android:id="@+id/autoCompleteTextView2"
+        android:hint="@string/ingredient2" />
 
     <AutoCompleteTextView
-        android:text="@string/ingredient3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/autoCompleteTextView3" />
+        android:id="@+id/autoCompleteTextView3"
+        android:hint="@string/ingredient3" />
 
     <AutoCompleteTextView
-        android:text="@string/ingredient4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/autoCompleteTextView4" />
+        android:id="@+id/autoCompleteTextView4"
+        android:hint="@string/ingredient4" />
 
     <Button
         android:text="@string/search"
