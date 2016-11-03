@@ -10,8 +10,10 @@ class Gericht  implements Serializable{
     String[] ingredients;
     String description;
 //test
-    public Gericht()	{
+    public Gericht(String name, String... ing)	{
+        for(int i = 0; ing.length>i;i++)    {
 
+        }
     }
 
     public void newIngredient(String ingredient)	{
