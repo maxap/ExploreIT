@@ -28,7 +28,8 @@
         android:text="@string/addReciepe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recipeButton" />
+        android:id="@+id/recipeButton"
+        android:onClick="rezepthinzufügen" />
 
     <Button
         android:text="@string/buttenClose"

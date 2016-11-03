@@ -64,7 +64,7 @@ public class OutputActivity extends AppCompatActivity {
         }
     }
 
-    private void Beenden(View view)
+    public void Beenden(View view)
     {
         finish();
     }

@@ -22,29 +22,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/autoCompleteTextView1"
-        android:hint="@string/ingredient1"
-        android:text="Nudeln" />
+        android:hint="@string/ingredient1" />
 
     <AutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/autoCompleteTextView2"
-        android:hint="@string/ingredient2"
-        android:text="Speck" />
+        android:hint="@string/ingredient2" />
 
     <AutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/autoCompleteTextView3"
-        android:hint="@string/ingredient3"
-        android:text="Eier" />
+        android:hint="@string/ingredient3" />
 
     <AutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/autoCompleteTextView4"
-        android:hint="@string/ingredient4"
-        android:text="Butter" />
+        android:hint="@string/ingredient4" />
 
     <Button
         android:text="@string/search"
