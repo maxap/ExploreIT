@@ -5,34 +5,39 @@ import java.io.Serializable;
 
 import io.realm.RealmObject;
 
+
 class Gericht extends RealmObject implements Serializable {
 
     private String Gericht;
     private int ingredientAmount;
     private String[] ingredients;
     private String description;
-//test
-    public Gericht()	{
 
-    }
+public Gericht(String Gericht, String ingredient1, String ingredient2, String ingredient3, String ingredient4) {
+    this.Gericht = Gericht;
+    this.ingredients[0] = ingredient1;
+    this.ingredients[1] = ingredient2;
+    this.ingredients[2] = ingredient3;
+    this.ingredients[3] = ingredient4;
+}
 
-    public void newIngredient(String ingredient)	{
+    public void newIngredient(String ingredient) {
         ingredients[ingredients.length == 0 ? ingredients.length : 0] = ingredient;
     }
 
-    public void setDescription(String description)	{
+    public void setDescription(String description) {
         this.description = description;
     }
 
-    public String getDescription()	{
+    public String getDescription() {
         return description;
     }
 
-    public void setName(String name)    {
+    public void setName(String name) {
         this.Gericht = name;
     }
 
-    public String getGericht()	{
+    public String getGericht() {
         return Gericht;
     }
 

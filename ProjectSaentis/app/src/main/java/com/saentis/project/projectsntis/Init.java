@@ -3,6 +3,7 @@ package com.saentis.project.projectsntis;
 import android.content.Context;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
@@ -18,18 +19,15 @@ import io.realm.annotations.PrimaryKey;
 
 public class Init extends RealmObject {
 
-    @PrimaryKey
-    private long id;
-    private String name;
-    private RealmList<Gericht> realmGericht;
-
 
     ArrayList<Gericht> gerichtliste = new ArrayList<>();
+    Gericht gericht;
 
+    public Init() {
+    }
 
     public Init(Context context) {
 
-        Gericht gericht = new Gericht();
         gericht = new Gericht("Kartoffelpfanne", "Kartoffeln", "Zwiebeln", "Tomaten", "Käse");
         gerichtliste.add(gericht);
 
@@ -47,22 +45,6 @@ public class Init extends RealmObject {
 
         gericht = new Gericht("Paprikatopf mit Hackfleisch", "Champingnons", "Paprika", "Hackfleisch", "Tomaten");
         gerichtliste.add(gericht);
-
-        /*
-        gericht.setName("Kartoffelpfanne");
-        gericht.newIngredient("Zwiebeln");
-        gericht.newIngredient("Tomaten");
-        gericht.newIngredient("Käse");
-        gericht.newIngredient("Kartoffeln");
-        gerichtliste.add(gericht);
-
-        gericht.setName("Kartoffelpfanne");
-        gericht.newIngredient("Zwiebeln");
-        gericht.newIngredient("Tomaten");
-        gericht.newIngredient("Käse");
-        gericht.newIngredient("Kartoffeln");
-        gerichtliste.add(gericht);*/
-
 
         Realm myRealm = Realm.getInstance(context);
 
