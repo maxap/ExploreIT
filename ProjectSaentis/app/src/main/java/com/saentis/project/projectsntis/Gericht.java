@@ -3,12 +3,14 @@ package com.saentis.project.projectsntis;
 
 import java.io.Serializable;
 
-class Gericht  implements Serializable{
+import io.realm.RealmObject;
+
+class Gericht extends RealmObject implements Serializable {
 
     private String Gericht;
-    int ingredientAmount;
-    String[] ingredients;
-    String description;
+    private int ingredientAmount;
+    private String[] ingredients;
+    private String description;
 //test
     public Gericht(String name, String... ing)	{
         for(int i = 0; ing.length>i;i++)    {
