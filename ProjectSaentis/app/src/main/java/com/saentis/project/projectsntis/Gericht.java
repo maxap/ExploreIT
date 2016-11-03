@@ -31,10 +31,16 @@ class Gericht  implements Serializable{
     public String getDescription()	{
         return description;
     }
+
     public String getGericht()	{
         return Gericht;
     }
+<<<<<<< HEAD
     public String getIngredient(int ingredientindex)	{
+=======
+
+    public String getIngrdient(int ingredientindex)	{
+>>>>>>> origin/master
         return ingredients[ingredientindex];
     }
 }

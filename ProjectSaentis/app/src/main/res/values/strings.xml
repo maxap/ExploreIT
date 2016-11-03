@@ -8,4 +8,9 @@
     <string name="search">Suchen</string>
     <string name="addReciepe">Füge Rezept hinzu</string>
     <string name="outputText">Folgende Rezepte sind mit ihren vorhandenen Zutaten möglich</string>
+    <string-array name="ingredients">
+        <item>TestZutat1</item>
+        <item>TestZutat2</item>
+        <item>TestZutat3</item>
+    </string-array>
 </resources>
