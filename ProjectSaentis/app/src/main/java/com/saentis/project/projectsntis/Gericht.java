@@ -6,12 +6,14 @@ import java.io.Serializable;
 import io.realm.RealmObject;
 
 
-class Gericht extends RealmObject implements Serializable {
+class Gericht extends RealmObject/* implements Serializable */{
 
     private String Gericht;
     private int ingredientAmount;
     private String[] ingredients;
     private String description;
+
+public Gericht()    {}
 
 public Gericht(String Gericht, String ingredient1, String ingredient2, String ingredient3, String ingredient4) {
     this.Gericht = Gericht;
@@ -22,8 +24,9 @@ public Gericht(String Gericht, String ingredient1, String ingredient2, String in
 }
 //test
     public Gericht(String name, String... ing)	{
+        this.Gericht=name;
         for(int i = 0; ing.length>i;i++)    {
-
+            ingredients[i] = ing[i];
         }
     }
 
