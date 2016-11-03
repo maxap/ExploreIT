@@ -45,7 +45,7 @@ public class SelectionActivity extends AppCompatActivity {
     public static final String INPUT_INGREDIENT7 = "ProjectSaentis.INPUT_INGREDIENT3";
     public static final String INPUT_INGREDIENT8 = "ProjectSaentis.INPUT_INGREDIENT4";
 
-    String input
+    String inputOne, inputTwo, inputThree, inputFour, inputFive, inputSix, inputSeven, inputEight;
 
     public void goToOutput(View view)  {
         Intent intent = new Intent(this, OutputActivity.class);
