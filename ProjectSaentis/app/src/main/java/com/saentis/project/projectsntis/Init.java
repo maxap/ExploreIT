@@ -1,10 +1,14 @@
 package com.saentis.project.projectsntis;
 
+import android.content.Context;
+
 import java.util.ArrayList;
 
 import io.realm.Realm;
+import io.realm.RealmConfiguration;
 import io.realm.RealmList;
 import io.realm.RealmObject;
+import io.realm.RealmResults;
 import io.realm.annotations.PrimaryKey;
 
 /**
@@ -20,37 +24,53 @@ public class Init extends RealmObject {
     private RealmList<Gericht> realmGericht;
 
 
-    //ArrayList<Gericht> gericht = new ArrayList<>();
-    //Gericht gerichte;
+    ArrayList<Gericht> gerichtliste = new ArrayList<>();
 
-    public Init() {
-        Gericht gericht = new Gericht;
-        ("Kartoffelpfanne", "Kartoffeln", "Zwiebeln", "Tomaten", "Käse");
-        realmGericht
 
-        gerichte = new Gericht("Kartoffelpfanne", "Kartoffeln", "Zwiebeln", "Tomaten", "Käse");
-        gericht.add(gerichte);
+    public Init(Context context) {
 
-        gerichte = new Gericht("Überbackene After-Work-Gnocchi", "Gnocchi", "Schlagsahne", "Milch", "Gouda");
-        gericht.add(gerichte);
+        Gericht gericht = new Gericht();
+        gericht = new Gericht("Kartoffelpfanne", "Kartoffeln", "Zwiebeln", "Tomaten", "Käse");
+        gerichtliste.add(gericht);
 
-        gerichte = new Gericht("Rucola-Lemon-Spaghetti", "Rucola", "Zitrone", "Nudeln", "Knoblauch");
-        gericht.add(gerichte);
+        gericht = new Gericht("Überbackene After-Work-Gnocchi", "Gnocchi", "Schlagsahne", "Milch", "Gouda");
+        gerichtliste.add(gericht);
 
-        gerichte = new Gericht("Eier-Speck-Nudelpfanne", "Nudeln", "Speck", "Eier", "Butter");
-        gericht.add(gerichte);
+        gericht = new Gericht("Rucola-Lemon-Spaghetti", "Rucola", "Zitrone", "Nudeln", "Knoblauch");
+        gerichtliste.add(gericht);
 
-        gerichte = new Gericht("Brotpudding", "Puddingpulver", "Schokolade", "Kekse", "Milch");
-        gericht.add(gerichte);
+        gericht = new Gericht("Eier-Speck-Nudelpfanne", "Nudeln", "Speck", "Eier", "Butter");
+        gerichtliste.add(gericht);
 
-        gerichte = new Gericht("Paprikatopf mit Hackfleisch", "Champingnons", "Paprika", "Hackfleisch", "Tomaten");
-        gericht.add(gerichte);
+        gericht = new Gericht("Brotpudding", "Puddingpulver", "Schokolade", "Kekse", "Milch");
+        gerichtliste.add(gericht);
 
-        // Initialize Realm
-        Realm.init(context);
+        gericht = new Gericht("Paprikatopf mit Hackfleisch", "Champingnons", "Paprika", "Hackfleisch", "Tomaten");
+        gerichtliste.add(gericht);
+
+        /*
+        gericht.setName("Kartoffelpfanne");
+        gericht.newIngredient("Zwiebeln");
+        gericht.newIngredient("Tomaten");
+        gericht.newIngredient("Käse");
+        gericht.newIngredient("Kartoffeln");
+        gerichtliste.add(gericht);
+
+        gericht.setName("Kartoffelpfanne");
+        gericht.newIngredient("Zwiebeln");
+        gericht.newIngredient("Tomaten");
+        gericht.newIngredient("Käse");
+        gericht.newIngredient("Kartoffeln");
+        gerichtliste.add(gericht);*/
+
+
+        Realm myRealm = Realm.getInstance(context);
+
+        myRealm.beginTransaction();
+        myRealm.copyToRealmOrUpdate(gerichtliste);
+
+        myRealm.commitTransaction();
     }
-
-    public
 }
 
 
