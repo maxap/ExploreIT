@@ -3,8 +3,11 @@ package com.saentis.project.projectsntis;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import static com.saentis.project.projectsntis.SelectionActivity.INPUT_INGREDIENT1;
 import static com.saentis.project.projectsntis.SelectionActivity.INPUT_INGREDIENT2;
@@ -43,6 +46,15 @@ public class OutputActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.outputListView);
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listViewData);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(OutputActivity.this, "Position: "+position, Toast.LENGTH_SHORT).show();  //Ausgabe beim draufdrüchen eines ListenElements
+            }
+        });
+
+
+
     }
 
 
