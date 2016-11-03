@@ -27,6 +27,9 @@ public Gericht(String Gericht, String ingredient1, String ingredient2, String in
         }
     }
 
+    public Gericht() {
+    }
+
     public void newIngredient(String ingredient) {
         ingredients[ingredients.length == 0 ? ingredients.length : 0] = ingredient;
     }
