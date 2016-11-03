@@ -13,7 +13,6 @@ public class SelectionActivity extends AppCompatActivity {
     AutoCompleteTextView autoCompleteTextView1, autoCompleteTextView2, autoCompleteTextView3, autoCompleteTextView4;
     String [] Ingredients;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +32,6 @@ public class SelectionActivity extends AppCompatActivity {
         ioTwo = (EditText) findViewById(R.id.autoCompleteTextView2);
         ioThree = (EditText) findViewById(R.id.autoCompleteTextView3);
         ioFour = (EditText) findViewById(R.id.autoCompleteTextView4);
-
     }
 
     public static final String INPUT_INGREDIENT1 = "ProjectSaentis.INPUT_INGREDIENT1";
