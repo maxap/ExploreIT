@@ -16,12 +16,10 @@ public class SelectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
-<<<<<<< HEAD
 
         Intent intent;
         intent = new Intent(this, OutputActivity.class);
 
-=======
         autoCompleteTextView1 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView1);
         autoCompleteTextView2 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView2);
         autoCompleteTextView3 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView3);
@@ -32,9 +30,5 @@ public class SelectionActivity extends AppCompatActivity {
         autoCompleteTextView2.setAdapter(adapter);
         autoCompleteTextView3.setAdapter(adapter);
         autoCompleteTextView4.setAdapter(adapter);
->>>>>>> origin/master
     }
-
-
-
 }

@@ -35,12 +35,8 @@ class Gericht  implements Serializable{
     public String getGericht()	{
         return Gericht;
     }
-<<<<<<< HEAD
-    public String getIngredient(int ingredientindex)	{
-=======
 
-    public String getIngrdient(int ingredientindex)	{
->>>>>>> origin/master
+    public String getIngredient(int ingredientindex) {
         return ingredients[ingredientindex];
     }
 }
