@@ -7,12 +7,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class OutputActivity extends AppCompatActivity {
-    Init rpdb = new Init(); //recipedatabse
-    String cingr[];
+    Init rpdb = new Init(); //recipedatabase
+    String cingr[];     //current ingridient
 
     ListView listView;
     ArrayAdapter<String> adapter;
-    String[] listViewData = {} ; //in diese Liste kommen die möglichen Rezepte
+    String[] listViewData = {"TEST1","TEST2","TEST3","TEST4"} ; //in diese Liste kommen die möglichen Rezepte
 
 
     @Override
@@ -20,7 +20,7 @@ public class OutputActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_output);
 
-
+/*
         Intent intent = getIntent();
         cingr[0] = intent.getStringExtra(inputOne);
         cingr[1] = intent.getStringExtra(inputTwo);
@@ -30,16 +30,13 @@ public class OutputActivity extends AppCompatActivity {
         cingr[5] = intent.getStringExtra(inputSix);
         cingr[6] = intent.getStringExtra(inputSeven);
         cingr[7] = intent.getStringExtra(inputEight);
-
+*/
         listView = (ListView) findViewById(R.id.outputListView);
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listViewData);
         listView.setAdapter(adapter);
-
-
     }
 
-
-
+/*
     public boolean testrecipe(int id)   {
         if(((rpdb.gericht.get(id).getIngredient(0) == cingr[0] || rpdb.gericht.get(id).getIngredient(0) == cingr[1] || rpdb.gericht.get(id).getIngredient(0) == cingr[2] || rpdb.gericht.get(id).getIngredient(0) == cingr[3] ) && (rpdb.gericht.get(id).getIngredient(1) == cingr[0] || rpdb.gericht.get(id).getIngredient(1) == cingr[1] || rpdb.gericht.get(id).getIngredient(2) == cingr[2] || rpdb.gericht.get(id).getIngredient(1) == cingr[3]) && (rpdb.gericht.get(id).getIngredient(2) == cingr[0] || rpdb.gericht.get(id).getIngredient(2) ==cingr[1] || rpdb.gericht.get(id).getIngredient(2) == cingr[3]) && (rpdb.gericht.get(id).getIngredient(3) == cingr[0] || rpdb.gericht.get(id).getIngredient(3) == cingr[1] || rpdb.gericht.get(id).getIngredient(3) == cingr[2] || rpdb.gericht.get(id).getIngredient(3) == cingr[3])))   {
             return true;
@@ -47,5 +44,5 @@ public class OutputActivity extends AppCompatActivity {
         else    {
             return false;
         }
-    }
+    }*/
 }
