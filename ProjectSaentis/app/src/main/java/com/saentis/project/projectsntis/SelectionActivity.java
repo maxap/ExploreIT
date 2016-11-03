@@ -19,8 +19,6 @@ public class SelectionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
 
-
-
         autoCompleteTextView1 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView1);
         autoCompleteTextView2 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView2);
         autoCompleteTextView3 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView3);
@@ -54,6 +52,5 @@ public class SelectionActivity extends AppCompatActivity {
         intent.putExtra(INPUT_INGREDIENT3, inputThree);
         intent.putExtra(INPUT_INGREDIENT4, inputFour);
         startActivity(intent);
-
     }
 }
