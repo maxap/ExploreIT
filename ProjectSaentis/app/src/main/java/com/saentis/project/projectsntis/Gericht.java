@@ -27,9 +27,11 @@ class Gericht{
     public String getDescription()	{
         return description;
     }
+
     public String getGericht()	{
         return Gericht;
     }
+
     public String getIngrdient(int ingredientindex)	{
         return ingredients[ingredientindex];
     }
