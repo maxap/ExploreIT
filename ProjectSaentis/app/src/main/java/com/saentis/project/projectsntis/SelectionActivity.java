@@ -3,8 +3,10 @@ package com.saentis.project.projectsntis;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Toast;
 
 public class SelectionActivity extends AppCompatActivity {
 
@@ -30,5 +32,10 @@ public class SelectionActivity extends AppCompatActivity {
         autoCompleteTextView2.setAdapter(adapter);
         autoCompleteTextView3.setAdapter(adapter);
         autoCompleteTextView4.setAdapter(adapter);
+    }
+
+    public void test(View view)
+    {
+        Toast.makeText(this, autoCompleteTextView1.getText(), Toast.LENGTH_SHORT).show();
     }
 }

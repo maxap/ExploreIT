@@ -16,12 +16,10 @@ class Gericht  implements Serializable{
         this.ingredients[1] = ingredient2;
         this.ingredients[2] = ingredient3;
         this.ingredients[3] = ingredient4;
-
     }
 
     public void newIngredient(String ingredient)	{
         ingredients[ingredients.length == 0 ? ingredients.length : 0] = ingredient;
-
     }
 
     public void setDescription(String description)	{
