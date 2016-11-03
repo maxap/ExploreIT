@@ -19,8 +19,8 @@ import static com.saentis.project.projectsntis.SelectionActivity.INPUT_INGREDIEN
 import static com.saentis.project.projectsntis.SelectionActivity.INPUT_INGREDIENT8;
 
 public class OutputActivity extends AppCompatActivity {
-    Init rpdb = new Init(); //recipedatabase
-    String cingr[];     //current ingridient
+    Init rpdb = new Init(this); //recipedatabase
+    String cingr[] = new String[4];     //current ingridient
 
     ListView listView;
     ArrayAdapter<String> adapter;
@@ -36,10 +36,10 @@ public class OutputActivity extends AppCompatActivity {
         cingr[1] = intent.getStringExtra(INPUT_INGREDIENT2);
         cingr[2] = intent.getStringExtra(INPUT_INGREDIENT3);
         cingr[3] = intent.getStringExtra(INPUT_INGREDIENT4);
-        cingr[4] = intent.getStringExtra(INPUT_INGREDIENT5);
-        cingr[5] = intent.getStringExtra(INPUT_INGREDIENT6);
-        cingr[6] = intent.getStringExtra(INPUT_INGREDIENT7);
-        cingr[7] = intent.getStringExtra(INPUT_INGREDIENT8);
+//        cingr[4] = intent.getStringExtra(INPUT_INGREDIENT5);
+//        cingr[5] = intent.getStringExtra(INPUT_INGREDIENT6);
+//        cingr[6] = intent.getStringExtra(INPUT_INGREDIENT7);
+//        cingr[7] = intent.getStringExtra(INPUT_INGREDIENT8);
 
         listView = (ListView) findViewById(R.id.outputListView);
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listViewData);
@@ -62,5 +62,10 @@ public class OutputActivity extends AppCompatActivity {
         else    {
             return false;
         }
+    }
+
+    private void Beenden(View view)
+    {
+        finish();
     }
 }

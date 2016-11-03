@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 
+import io.realm.Realm;
+
 public class SelectionActivity extends AppCompatActivity {
     EditText ioOne, ioTwo, ioThree, ioFour;
     AutoCompleteTextView autoCompleteTextView1, autoCompleteTextView2, autoCompleteTextView3, autoCompleteTextView4;
@@ -17,6 +19,10 @@ public class SelectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
+
+        Realm.init(this);
+
+        final Realm realm = Realm.getDefaultInstance();
 
         autoCompleteTextView1 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView1);
         autoCompleteTextView2 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView2);
@@ -55,11 +61,11 @@ public class SelectionActivity extends AppCompatActivity {
         intent.putExtra(INPUT_INGREDIENT2, inputTwo);               // theoretisch: in for-Scheife packen, INGREDIENT durch i ersetzen, mmittels i.toString()  sollte doch funktionieren?!
         intent.putExtra(INPUT_INGREDIENT3, inputThree);
         intent.putExtra(INPUT_INGREDIENT4, inputFour);
-        intent.putExtra(INPUT_INGREDIENT5, inputFive);
-        intent.putExtra(INPUT_INGREDIENT6, inputSix);               // theoretisch: in for-Scheife packen, INGREDIENT durch i ersetzen, mmittels i.toString()  sollte doch funktionieren?!
-
-        intent.putExtra(INPUT_INGREDIENT7, inputSeven);
-        intent.putExtra(INPUT_INGREDIENT8, inputEight);
+//        intent.putExtra(INPUT_INGREDIENT5, inputFive);
+//        intent.putExtra(INPUT_INGREDIENT6, inputSix);               // theoretisch: in for-Scheife packen, INGREDIENT durch i ersetzen, mmittels i.toString()  sollte doch funktionieren?!
+//
+//        intent.putExtra(INPUT_INGREDIENT7, inputSeven);
+//        intent.putExtra(INPUT_INGREDIENT8, inputEight);
         startActivity(intent);
     }
 }

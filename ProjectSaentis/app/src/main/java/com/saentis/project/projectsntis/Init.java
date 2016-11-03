@@ -4,7 +4,6 @@ import android.content.Context;
 
 import java.util.ArrayList;
 import java.util.Collection;
-
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 import io.realm.RealmList;
@@ -17,14 +16,11 @@ import io.realm.annotations.PrimaryKey;
  */
 
 
-public class Init extends RealmObject {
-
+public class Init {
 
     ArrayList<Gericht> gerichtliste = new ArrayList<>();
     Gericht gericht;
 
-    public Init() {
-    }
 
     public Init(Context context) {
 
@@ -46,7 +42,7 @@ public class Init extends RealmObject {
         gericht = new Gericht("Paprikatopf mit Hackfleisch", "Champingnons", "Paprika", "Hackfleisch", "Tomaten");
         gerichtliste.add(gericht);
 
-        Realm myRealm = Realm.getInstance(context);
+        Realm myRealm = Realm.getDefaultInstance();
 
         myRealm.beginTransaction();
         myRealm.copyToRealmOrUpdate(gerichtliste);
