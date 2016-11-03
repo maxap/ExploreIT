@@ -26,12 +26,10 @@ public class OutputActivity extends AppCompatActivity {
     ArrayAdapter<String> adapter;
     String[] listViewData = {"TEST1","TEST2","TEST3","TEST4"} ; //in diese Liste kommen die möglichen Rezepte
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_output);
-
 
         Intent intent = getIntent();
         cingr[0] = intent.getStringExtra(INPUT_INGREDIENT1);
@@ -52,14 +50,13 @@ public class OutputActivity extends AppCompatActivity {
                 Toast.makeText(OutputActivity.this, "Position: "+position, Toast.LENGTH_SHORT).show();  //Ausgabe beim draufdrüchen eines ListenElements
             }
         });
-
-
-
     }
 
-
     public boolean testrecipe(int id)   {
-        if(((rpdb.gerichtliste.get(id).getIngredient(0) == cingr[0] || rpdb.gerichtliste.get(id).getIngredient(0) == cingr[1] || rpdb.gerichtliste.get(id).getIngredient(0) == cingr[2] || rpdb.gerichtliste.get(id).getIngredient(0) == cingr[3] ) && (rpdb.gerichtliste.get(id).getIngredient(1) == cingr[0] || rpdb.gerichtliste.get(id).getIngredient(1) == cingr[1] || rpdb.gerichtliste.get(id).getIngredient(2) == cingr[2] || rpdb.gerichtliste.get(id).getIngredient(1) == cingr[3]) && (rpdb.gerichtliste.get(id).getIngredient(2) == cingr[0] || rpdb.gerichtliste.get(id).getIngredient(2) ==cingr[1] || rpdb.gerichtliste.get(id).getIngredient(2) == cingr[3]) && (rpdb.gerichtliste.get(id).getIngredient(3) == cingr[0] || rpdb.gerichtliste.get(id).getIngredient(3) == cingr[1] || rpdb.gerichtliste.get(id).getIngredient(3) == cingr[2] || rpdb.gerichtliste.get(id).getIngredient(3) == cingr[3])))   {
+        if(((rpdb.gerichtliste.get(id).getIngredient(0) == cingr[0] || rpdb.gerichtliste.get(id).getIngredient(0) == cingr[1] || rpdb.gerichtliste.get(id).getIngredient(0) == cingr[2] || rpdb.gerichtliste.get(id).getIngredient(0) == cingr[3] ) &&
+                (rpdb.gerichtliste.get(id).getIngredient(1) == cingr[0] || rpdb.gerichtliste.get(id).getIngredient(1) == cingr[1] || rpdb.gerichtliste.get(id).getIngredient(2) == cingr[2] || rpdb.gerichtliste.get(id).getIngredient(1) == cingr[3]) &&
+                (rpdb.gerichtliste.get(id).getIngredient(2) == cingr[0] || rpdb.gerichtliste.get(id).getIngredient(2) == cingr[1] || rpdb.gerichtliste.get(id).getIngredient(2) == cingr[3]) &&
+                (rpdb.gerichtliste.get(id).getIngredient(3) == cingr[0] || rpdb.gerichtliste.get(id).getIngredient(3) == cingr[1] || rpdb.gerichtliste.get(id).getIngredient(3) == cingr[2] || rpdb.gerichtliste.get(id).getIngredient(3) == cingr[3])))   {
             return true;
         }
         else    {

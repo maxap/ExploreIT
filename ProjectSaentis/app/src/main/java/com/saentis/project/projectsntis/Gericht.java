@@ -1,28 +1,25 @@
 package com.saentis.project.projectsntis;
 
-
 import java.io.Serializable;
-
 import io.realm.RealmObject;
 
 
-class Gericht extends RealmObject/* implements Serializable */{
+class Gericht extends RealmObject {
 
     private String Gericht;
-    private int ingredientAmount;
-    private String[] ingredients;
+    //private int ingredientAmount;
+    private String[] ingredients ={};
     private String description;
 
-public Gericht()    {}
+    public Gericht() {
+    }
 
-//test
-    public Gericht(String name, String... ing)	{
-        this.Gericht=name;
-        for(int i = 0; ing.length>i;i++)    {
+    public Gericht(String name, String... ing) {
+        this.Gericht = name;
+        for (int i = 0; ing.length > i; i++) {
             ingredients[i] = ing[i];
         }
     }
-
 
     public void newIngredient(String ingredient) {
         ingredients[ingredients.length == 0 ? ingredients.length : 0] = ingredient;
