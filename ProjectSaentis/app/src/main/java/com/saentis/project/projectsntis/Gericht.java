@@ -70,9 +70,11 @@ public class Gericht extends RealmObject {
 
             case 6:
                 return ingredient7;
+            case 7:
+                return ingredient8;
 
             default:
-                return ingredient8;
-        }
-    }
+                return " - DEFAULT in switch-case - ";
+        }}
+
 }

@@ -22,13 +22,17 @@ public class OutputActivity extends AppCompatActivity {
     Init rpdb = new Init(this); //recipedatabase
     String cingr[] = new String[4];     //current ingridient
     int positionIndex[] = new int[20];
+    int positionCounter = 0;
 
     ListView listView;
     ArrayAdapter<String> adapter;
-    String[] listViewData = {} ; //in diese Liste kommen die möglichen Rezepte
+    String[] listViewData = new String[20] ; //in diese Liste kommen die möglichen Rezepte
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        for(int i = 0; i<listViewData.length; i++)  {
+            listViewData[i] = "";
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_output);
 
@@ -58,22 +62,30 @@ public class OutputActivity extends AppCompatActivity {
     public void filler()    {
         for(int i = 0; i<rpdb.gerichtliste.size(); i++) {
             if(testrecipe(i))  {
-                listViewData[listViewData.length] = rpdb.gerichtliste.get(i).getGericht();
-                positionIndex[positionIndex.length] = i;
+                listViewData[positionCounter] = rpdb.gerichtliste.get(i).getGericht();
+                positionIndex[positionCounter] = i;
+                positionCounter++;
+                System.out.println("true in filler, index: "+i);
             }
+
         }
+        System.out.println("Filler Finished");
     }
 
     public boolean testrecipe(int id)   {
-        if(((rpdb.gerichtliste.get(id).getIngredient(0) == cingr[0] || rpdb.gerichtliste.get(id).getIngredient(0) == cingr[1] || rpdb.gerichtliste.get(id).getIngredient(0) == cingr[2] || rpdb.gerichtliste.get(id).getIngredient(0) == cingr[3] ) &&
-                (rpdb.gerichtliste.get(id).getIngredient(1) == cingr[0] || rpdb.gerichtliste.get(id).getIngredient(1) == cingr[1] || rpdb.gerichtliste.get(id).getIngredient(2) == cingr[2] || rpdb.gerichtliste.get(id).getIngredient(1) == cingr[3]) &&
-                (rpdb.gerichtliste.get(id).getIngredient(2) == cingr[0] || rpdb.gerichtliste.get(id).getIngredient(2) == cingr[1] || rpdb.gerichtliste.get(id).getIngredient(2) == cingr[3]) &&
-                (rpdb.gerichtliste.get(id).getIngredient(3) == cingr[0] || rpdb.gerichtliste.get(id).getIngredient(3) == cingr[1] || rpdb.gerichtliste.get(id).getIngredient(3) == cingr[2] || rpdb.gerichtliste.get(id).getIngredient(3) == cingr[3])))   {
-            return true;
+        boolean outputs[] = new boolean[4];
+        for(int i0 = 0; i0<4;i0++) {
+            outputs[i0] = false;
         }
-        else    {
-            return false;
+        for(int i1 = 0;i1<4;i1++) {
+            for(int i2=0; i2<4; i2++)    {
+                if(rpdb.gerichtliste.get(id).getIngredient(i1).equals(cingr[2]))    {
+                    System.out.println("Hit, id: "+id);
+                    outputs[i2] = true;
+                }
+            }
         }
+        return outputs[0]&&outputs[1]&&outputs[2]&&outputs[3];
     }
 
     public void Beenden(View view)
