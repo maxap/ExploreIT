@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 
@@ -30,6 +31,11 @@ public class AddRecipe extends AppCompatActivity {
         autoCompleteTextViewAdd2 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView2);
         autoCompleteTextViewAdd3 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView3);
         autoCompleteTextViewAdd4 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView4);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, SelectionActivity.zutaten);
+        autoCompleteTextViewAdd1.setAdapter(adapter);
+        autoCompleteTextViewAdd2.setAdapter(adapter);
+        autoCompleteTextViewAdd3.setAdapter(adapter);
+        autoCompleteTextViewAdd4.setAdapter(adapter);
         editTextRezeptName = (EditText) findViewById(R.id.editTextRezeptName);
     }
 
