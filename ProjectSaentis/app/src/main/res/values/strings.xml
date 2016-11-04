@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">ProjectSäntis</string>
-    <string name="inputText">Bitte geben Sie ihre Zutaten ein, die Sie zur Verfügung haben</string>
+    <string name="inputText">Bitte geben Sie die Zutaten ein, die Sie gerade zur Verfügung haben</string>
     <string name="ingredient1">Zutat 1</string>
     <string name="ingredient2">Zutat 2</string>
     <string name="ingredient3">Zutat 3</string>
     <string name="ingredient4">Zutat 4</string>
     <string name="search">Suchen</string>
     <string name="addReciepe">Rezept hinzufügen</string>
-    <string name="outputText">Folgende Geriechte sind mit Ihren vorhandenen Zutaten möglich</string>
+    <string name="outputText">Folgende Gerichte sind mit Ihren vorhandenen Zutaten möglich</string>
     <string name="buttenClose">Zurück</string>
-    <string name="saveRecipe">Rezept Speichern</string>
+    <string name="saveRecipe">Rezept speichern</string>
     <string name="rezeptLink">Link zu Rezept</string>
 </resources>

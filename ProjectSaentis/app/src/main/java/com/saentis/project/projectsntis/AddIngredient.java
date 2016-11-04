@@ -6,8 +6,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
+import io.realm.internal.Context;
+import io.realm.internal.async.QueryUpdateTask;
 
 public class AddIngredient extends AppCompatActivity {
+
+    ArrayList<Zutat> zutatliste = new ArrayList<>();
+    Zutat zutat;
 
     EditText editTextAddZutat;
 
@@ -25,8 +36,24 @@ public class AddIngredient extends AppCompatActivity {
     }
 
     public void speichern(View view) {
-       // SelectionActivity.zutaten.add(editTextAddZutat.getText().toString());
+        Realm myRealmZutat= Realm.getDefaultInstance();
 
-        finish();
+        zutat = new Zutat(editTextAddZutat.getText().toString());
+        if(zutat != myRealmZutat.)
+        zutatliste.add(zutat);
+
+        //RealmConfiguration config2 = new RealmConfiguration.Builder().deleteRealmIfMigrationNeeded().build();
+        //final Realm myRealmZutat = Realm.getInstance(config2);
+
+
+        myRealmZutat.beginTransaction();
+        myRealmZutat.copyToRealmOrUpdate(zutatliste);
+        myRealmZutat.commitTransaction();
+        myRealmZutat.close();
+
+        Toast.makeText(this, "Zutat wurde gespeichert", Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(this, SelectionActivity.class);
+        startActivity(intent);
     }
 }
