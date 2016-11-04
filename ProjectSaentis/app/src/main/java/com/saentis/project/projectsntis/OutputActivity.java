@@ -56,7 +56,7 @@ public class OutputActivity extends AppCompatActivity {
     }
 
     public void filler()    {
-        for(int i = 0; i<=rpdb.gerichtliste.size(); i++) {
+        for(int i = 0; i<rpdb.gerichtliste.size(); i++) {
             if(testrecipe(i))  {
                 listViewData[listViewData.length] = rpdb.gerichtliste.get(i).getGericht();
                 positionIndex[positionIndex.length] = i;

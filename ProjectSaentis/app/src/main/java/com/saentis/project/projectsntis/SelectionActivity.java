@@ -44,14 +44,14 @@ public class SelectionActivity extends AppCompatActivity {
     public static final String INPUT_INGREDIENT2 = "ProjectSaentis.INPUT_INGREDIENT2";
     public static final String INPUT_INGREDIENT3 = "ProjectSaentis.INPUT_INGREDIENT3";
     public static final String INPUT_INGREDIENT4 = "ProjectSaentis.INPUT_INGREDIENT4";
-    public static final String INPUT_INGREDIENT5 = "ProjectSaentis.INPUT_INGREDIENT1";
-    public static final String INPUT_INGREDIENT6 = "ProjectSaentis.INPUT_INGREDIENT2";
-    public static final String INPUT_INGREDIENT7 = "ProjectSaentis.INPUT_INGREDIENT3";
-    public static final String INPUT_INGREDIENT8 = "ProjectSaentis.INPUT_INGREDIENT4";
+    public static final String INPUT_INGREDIENT5 = "ProjectSaentis.INPUT_INGREDIENT5";
+    public static final String INPUT_INGREDIENT6 = "ProjectSaentis.INPUT_INGREDIENT6";
+    public static final String INPUT_INGREDIENT7 = "ProjectSaentis.INPUT_INGREDIENT7";
+    public static final String INPUT_INGREDIENT8 = "ProjectSaentis.INPUT_INGREDIENT8";
 
     String inputOne, inputTwo, inputThree, inputFour, inputFive, inputSix, inputSeven, inputEight;
 
-    public void goToOutput(View view)  {
+    public void goToOut(View view)  {
         Intent intent = new Intent(this, OutputActivity.class);
         inputOne = ioOne.getText().toString();
         inputTwo = ioTwo.getText().toString();
