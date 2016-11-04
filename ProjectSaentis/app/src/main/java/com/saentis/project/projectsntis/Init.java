@@ -47,6 +47,7 @@ public class Init {
 
         myRealm.beginTransaction();
         myRealm.copyToRealmOrUpdate(gerichtliste);
+        gerichtliste.addAll(myRealm.where(Gericht.class).findAll());
 
         myRealm.commitTransaction();
     }

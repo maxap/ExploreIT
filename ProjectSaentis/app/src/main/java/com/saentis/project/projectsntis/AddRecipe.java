@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -27,25 +28,26 @@ public class AddRecipe extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        autoCompleteTextViewAdd1 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView1);
-        autoCompleteTextViewAdd2 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView2);
-        autoCompleteTextViewAdd3 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView3);
-        autoCompleteTextViewAdd4 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView4);
+        autoCompleteTextViewAdd1 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextViewAdd1);
+        autoCompleteTextViewAdd2 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextViewAdd2);
+        autoCompleteTextViewAdd3 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextViewAdd3);
+        autoCompleteTextViewAdd4 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextViewAdd4);
+        editTextRezeptName = (EditText) findViewById(R.id.editTextRezeptName);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, SelectionActivity.zutaten);
         autoCompleteTextViewAdd1.setAdapter(adapter);
         autoCompleteTextViewAdd2.setAdapter(adapter);
         autoCompleteTextViewAdd3.setAdapter(adapter);
         autoCompleteTextViewAdd4.setAdapter(adapter);
-        editTextRezeptName = (EditText) findViewById(R.id.editTextRezeptName);
+
     }
 
-    public void rezepthinzufuegen(View view)
+    public void rezeptHinzufuegen(View view)
     {
         String ingridient1 = autoCompleteTextViewAdd1.getText().toString();
         String ingridient2 = autoCompleteTextViewAdd2.getText().toString();
         String ingridient3 = autoCompleteTextViewAdd3.getText().toString();
         String ingridient4 = autoCompleteTextViewAdd4.getText().toString();
-        String rezeptname = autoCompleteTextViewAdd4.getText().toString();
+        String rezeptname = editTextRezeptName.getText().toString();
 
         gericht = new Gericht(rezeptname, ingridient1, ingridient2, ingridient3, ingridient4);
         gerichtliste.add(gericht);
@@ -56,6 +58,8 @@ public class AddRecipe extends AppCompatActivity {
         myRealm.copyToRealmOrUpdate(gerichtliste);
 
         myRealm.commitTransaction();
+
+        Toast.makeText(this, "Rezept wurde gespeichert", Toast.LENGTH_SHORT).show();
     }
 
     public void beenden(View view)
