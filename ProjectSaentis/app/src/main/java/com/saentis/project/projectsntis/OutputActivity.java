@@ -79,7 +79,7 @@ public class OutputActivity extends AppCompatActivity {
         }
         for(int i1 = 0;i1<4;i1++) {
             for(int i2=0; i2<4; i2++)    {
-                if(rpdb.gerichtliste.get(id).getIngredient(i1).equals(cingr[2]))    {
+                if(rpdb.gerichtliste.get(id).getIngredient(i1).equals(cingr[i2]))    {
                     System.out.println("Hit, id: "+id);
                     outputs[i2] = true;
                 }
