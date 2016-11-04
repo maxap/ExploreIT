@@ -25,7 +25,7 @@ public class OutputActivity extends AppCompatActivity {
 
     ListView listView;
     ArrayAdapter<String> adapter;
-    String[] listViewData = {"TEST1","TEST2","TEST3","TEST4"} ; //in diese Liste kommen die möglichen Rezepte
+    String[] listViewData = {} ; //in diese Liste kommen die möglichen Rezepte
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
