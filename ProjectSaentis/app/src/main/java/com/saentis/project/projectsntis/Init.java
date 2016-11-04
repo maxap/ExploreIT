@@ -21,9 +21,10 @@ public class Init {
     ArrayList<Gericht> gerichtliste = new ArrayList<>();
     Gericht gericht;
 
+    ArrayList<String>zutaten =  new ArrayList<>();
+
 
     public Init(Context context) {
-
         gericht = new Gericht("Kartoffelpfanne", "Kartoffeln", "Zwiebeln", "Tomaten", "Käse");
         gerichtliste.add(gericht);
 

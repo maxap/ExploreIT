@@ -1,36 +1,14 @@
 <resources>
     <string name="app_name">ProjectSäntis</string>
-    <string name="inputText">Bitte geben sie ihre Zutaten ein, die sie zur Verfügung haben</string>
+    <string name="inputText">Bitte geben Sie ihre Zutaten ein, die Sie zur Verfügung haben</string>
     <string name="ingredient1">Zutat 1</string>
     <string name="ingredient2">Zutat 2</string>
     <string name="ingredient3">Zutat 3</string>
     <string name="ingredient4">Zutat 4</string>
     <string name="search">Suchen</string>
     <string name="addReciepe">Rezept hinzufügen</string>
-    <string name="outputText">Folgende Geriechte sind mit ihren vorhandenen Zutaten möglich</string>
+    <string name="outputText">Folgende Geriechte sind mit Ihren vorhandenen Zutaten möglich</string>
     <string name="buttenClose">Zurück</string>
     <string name="saveRecipe">Rezept Speichern</string>
     <string name="rezeptLink">Link zu Rezept</string>
-    <string-array name="ingredients">
-        <item>Kartoffeln</item>
-        <item>Zwiebeln</item>
-        <item>Tomaten</item>
-        <item>Käse</item>
-        <item>Gnocchi</item>
-        <item>Schlagsahne</item>
-        <item>Milch</item>
-        <item>Zitrone</item>
-        <item>Rucola</item>
-        <item>Nudeln</item>
-        <item>Knoblauch</item>
-        <item>Speck</item>
-        <item>Eier</item>
-        <item>Butter</item>
-        <item>Puddingpulver</item>
-        <item>Schokolade</item>
-        <item>Kekse</item>
-        <item>Hackfleisch</item>
-        <item>Champingnons</item>
-        <item>Paprika</item>
-    </string-array>
 </resources>

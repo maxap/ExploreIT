@@ -8,12 +8,14 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 
+import java.util.ArrayList;
+
 import io.realm.Realm;
 
 public class SelectionActivity extends AppCompatActivity {
     EditText ioOne, ioTwo, ioThree, ioFour;
     AutoCompleteTextView autoCompleteTextView1, autoCompleteTextView2, autoCompleteTextView3, autoCompleteTextView4;
-    String [] Ingredients;
+    public static ArrayList<String>zutaten =  new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,26 @@ public class SelectionActivity extends AppCompatActivity {
         getSupportActionBar().setLogo(R.mipmap.ic_launcher);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
+        zutaten.add("Kartoffeln");
+        zutaten.add("Zwiebeln");
+        zutaten.add("Tomaten");
+        zutaten.add("Käse");
+        zutaten.add("Gnocchi");
+        zutaten.add("Schlagsahne");
+        zutaten.add("Milch");
+        zutaten.add("Zitrone");
+        zutaten.add("Rucola");
+        zutaten.add("Nudeln");
+        zutaten.add("Knoblauch");
+        zutaten.add("Speck");
+        zutaten.add("Eier");
+        zutaten.add("Butter");
+        zutaten.add("Puddingpulver");
+        zutaten.add("Schokolade");
+        zutaten.add("Kekse");
+        zutaten.add("Hackfleisch");
+        zutaten.add("Champingnons");
+        zutaten.add("Paprika");
 
         Realm.init(this);
 
@@ -32,8 +54,7 @@ public class SelectionActivity extends AppCompatActivity {
         autoCompleteTextView2 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView2);
         autoCompleteTextView3 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView3);
         autoCompleteTextView4 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView4);
-        Ingredients = getResources().getStringArray(R.array.ingredients);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Ingredients);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, zutaten);
         autoCompleteTextView1.setAdapter(adapter);
         autoCompleteTextView2.setAdapter(adapter);
         autoCompleteTextView3.setAdapter(adapter);
