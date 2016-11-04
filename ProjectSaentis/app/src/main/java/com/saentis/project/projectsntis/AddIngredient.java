@@ -39,7 +39,6 @@ public class AddIngredient extends AppCompatActivity {
         Realm myRealmZutat= Realm.getDefaultInstance();
 
         zutat = new Zutat(editTextAddZutat.getText().toString());
-        if(zutat != myRealmZutat.)
         zutatliste.add(zutat);
 
         //RealmConfiguration config2 = new RealmConfiguration.Builder().deleteRealmIfMigrationNeeded().build();
