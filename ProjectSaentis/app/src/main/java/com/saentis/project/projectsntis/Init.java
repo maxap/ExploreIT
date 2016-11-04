@@ -53,6 +53,7 @@ public class Init {
         gerichtliste.addAll(myRealm.where(Gericht.class).findAll());
 
         myRealm.commitTransaction();
+        myRealm.close();
     }
 }
 

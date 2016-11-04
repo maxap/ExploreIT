@@ -36,18 +36,20 @@ public class AddIngredient extends AppCompatActivity {
     }
 
     public void speichern(View view) {
+        Realm myRealmZutat= Realm.getDefaultInstance();
 
         zutat = new Zutat(editTextAddZutat.getText().toString());
+        if(zutat != myRealmZutat.)
         zutatliste.add(zutat);
 
-        RealmConfiguration config = new RealmConfiguration.Builder().deleteRealmIfMigrationNeeded().build();
-        final Realm myRealmZutat = Realm.getInstance(config);
+        //RealmConfiguration config2 = new RealmConfiguration.Builder().deleteRealmIfMigrationNeeded().build();
+        //final Realm myRealmZutat = Realm.getInstance(config2);
 
-        //Realm myRealmZutat= Realm.getDefaultInstance();
 
         myRealmZutat.beginTransaction();
         myRealmZutat.copyToRealmOrUpdate(zutatliste);
         myRealmZutat.commitTransaction();
+        myRealmZutat.close();
 
         Toast.makeText(this, "Zutat wurde gespeichert", Toast.LENGTH_SHORT).show();
 
