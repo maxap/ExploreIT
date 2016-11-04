@@ -55,7 +55,8 @@
         android:text="@string/saveRecipe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/addRecipeButton" />
+        android:id="@+id/addRecipeButton"
+        android:onClick="rezepthinzufügen" />
 
     <Button
         android:text="@string/buttenClose"

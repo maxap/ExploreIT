@@ -30,7 +30,7 @@ public class AddRecipe extends AppCompatActivity {
         editTextRezeptName = (EditText) findViewById(R.id.editTextRezeptName);
     }
 
-    public void rezepthinzufügen(Context context)
+    public void rezepthinzufügen(View view)
     {
         String ingridient1 = autoCompleteTextViewAdd1.getText().toString();
         String ingridient2 = autoCompleteTextViewAdd2.getText().toString();
