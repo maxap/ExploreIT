@@ -80,4 +80,10 @@ public class OutputActivity extends AppCompatActivity {
     {
         finish();
     }
+
+    public void goToRecipe(View view)
+    {
+        Intent intent = new Intent(this, AddRecipe.class);
+        startActivity(intent);
+    }
 }

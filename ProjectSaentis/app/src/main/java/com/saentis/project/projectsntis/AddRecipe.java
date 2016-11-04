@@ -1,5 +1,6 @@
 package com.saentis.project.projectsntis;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,8 @@ public class AddRecipe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_recipe);
 
+        Intent intent = getIntent();
+
         autoCompleteTextViewAdd1 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView1);
         autoCompleteTextViewAdd2 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView2);
         autoCompleteTextViewAdd3 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView3);
@@ -30,7 +33,7 @@ public class AddRecipe extends AppCompatActivity {
         editTextRezeptName = (EditText) findViewById(R.id.editTextRezeptName);
     }
 
-    public void rezepthinzufügen(View view)
+    public void rezepthinzufuegen(View view)
     {
         String ingridient1 = autoCompleteTextViewAdd1.getText().toString();
         String ingridient2 = autoCompleteTextViewAdd2.getText().toString();
