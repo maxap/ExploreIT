@@ -11,6 +11,14 @@
     tools:context="com.saentis.project.projectsntis.AddRecipe"
     android:orientation="vertical">
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextRezeptName"
+        android:hint="Rezeptname" />
+
     <AutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
