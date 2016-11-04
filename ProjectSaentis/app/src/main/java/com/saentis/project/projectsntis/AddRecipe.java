@@ -56,4 +56,10 @@ public class AddRecipe extends AppCompatActivity {
     {
         finish();
     }
+
+    public void ZutatHinzufuegen(View view)
+    {
+        Intent intent = new Intent(this, AddIngredient.class);
+        startActivity(intent);
+    }
 }
