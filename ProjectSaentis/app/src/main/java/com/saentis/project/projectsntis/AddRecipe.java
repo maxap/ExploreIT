@@ -60,6 +60,9 @@ public class AddRecipe extends AppCompatActivity {
         myRealm.commitTransaction();
 
         Toast.makeText(this, "Rezept wurde gespeichert", Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(this, SelectionActivity.class);
+        startActivity(intent);
     }
 
     public void beenden(View view)
