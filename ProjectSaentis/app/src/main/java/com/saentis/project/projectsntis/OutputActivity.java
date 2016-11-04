@@ -21,6 +21,7 @@ import static com.saentis.project.projectsntis.SelectionActivity.INPUT_INGREDIEN
 public class OutputActivity extends AppCompatActivity {
     Init rpdb = new Init(this); //recipedatabase
     String cingr[] = new String[4];     //current ingridient
+    int positionIndex[] = new int[20];
 
     ListView listView;
     ArrayAdapter<String> adapter;
@@ -41,6 +42,8 @@ public class OutputActivity extends AppCompatActivity {
 //        cingr[6] = intent.getStringExtra(INPUT_INGREDIENT7);
 //        cingr[7] = intent.getStringExtra(INPUT_INGREDIENT8);
 
+        filler();
+
         listView = (ListView) findViewById(R.id.outputListView);
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listViewData);
         listView.setAdapter(adapter);
@@ -50,6 +53,15 @@ public class OutputActivity extends AppCompatActivity {
                 Toast.makeText(OutputActivity.this, "Position: "+position, Toast.LENGTH_SHORT).show();  //Ausgabe beim draufdrüchen eines ListenElements
             }
         });
+    }
+
+    public void filler()    {
+        for(int i = 0; i<=rpdb.gerichtliste.size(); i++) {
+            if(testrecipe(i))  {
+                listViewData[listViewData.length] = rpdb.gerichtliste.get(i).getGericht();
+                positionIndex[positionIndex.length] = i;
+            }
+        }
     }
 
     public boolean testrecipe(int id)   {
