@@ -46,7 +46,7 @@ public class AddIngredient extends AppCompatActivity {
         //Realm myRealmZutat= Realm.getDefaultInstance();
 
         myRealmZutat.beginTransaction();
-        //myRealmZutat.copyToRealmOrUpdate(zutatliste);
+        myRealmZutat.copyToRealmOrUpdate(zutatliste);
         myRealmZutat.commitTransaction();
 
         Toast.makeText(this, "Zutat wurde gespeichert", Toast.LENGTH_SHORT).show();

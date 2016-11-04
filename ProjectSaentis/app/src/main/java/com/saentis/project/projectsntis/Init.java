@@ -43,7 +43,10 @@ public class Init {
         gericht = new Gericht("Paprikatopf mit Hackfleisch", "Champingnons", "Paprika", "Hackfleisch", "Tomaten");
         gerichtliste.add(gericht);
 
+        //RealmConfiguration config2 = new RealmConfiguration.Builder().deleteRealmIfMigrationNeeded().build();
+        //final Realm myRealm = Realm.getInstance(config2);
         Realm myRealm = Realm.getDefaultInstance();
+
 
         myRealm.beginTransaction();
         myRealm.copyToRealmOrUpdate(gerichtliste);
