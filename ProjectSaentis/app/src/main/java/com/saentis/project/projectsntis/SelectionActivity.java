@@ -15,7 +15,7 @@ import io.realm.Realm;
 public class SelectionActivity extends AppCompatActivity {
     EditText ioOne, ioTwo, ioThree, ioFour;
     AutoCompleteTextView autoCompleteTextView1, autoCompleteTextView2, autoCompleteTextView3, autoCompleteTextView4;
-    ArrayList<String>zutaten =  new ArrayList<>();
+    public static ArrayList<String>zutaten =  new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
