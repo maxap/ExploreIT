@@ -7,7 +7,7 @@
     <string name="ingredient4">Zutat 4</string>
     <string name="search">Suchen</string>
     <string name="addReciepe">Rezept hinzufügen</string>
-    <string name="outputText">Folgende Gerichte sind mit ihren vorhandenen Zutaten möglich</string>
+    <string name="outputText">Folgende Geriechte sind mit Ihren vorhandenen Zutaten möglich</string>
     <string name="buttenClose">Zurück</string>
     <string name="saveRecipe">Rezept Speichern</string>
     <string name="rezeptLink">Link zu Rezept</string>
