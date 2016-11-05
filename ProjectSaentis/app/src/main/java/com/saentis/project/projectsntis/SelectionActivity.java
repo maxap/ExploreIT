@@ -86,11 +86,10 @@ public class SelectionActivity extends AppCompatActivity {
         intent.putExtra(INPUT_INGREDIENT2, inputTwo);               // theoretisch: in for-Scheife packen, INGREDIENT durch i ersetzen, mmittels i.toString()  sollte doch funktionieren?!
         intent.putExtra(INPUT_INGREDIENT3, inputThree);
         intent.putExtra(INPUT_INGREDIENT4, inputFour);
-//        intent.putExtra(INPUT_INGREDIENT5, inputFive);
-//        intent.putExtra(INPUT_INGREDIENT6, inputSix);               // theoretisch: in for-Scheife packen, INGREDIENT durch i ersetzen, mmittels i.toString()  sollte doch funktionieren?!
-//
-//        intent.putExtra(INPUT_INGREDIENT7, inputSeven);
-//        intent.putExtra(INPUT_INGREDIENT8, inputEight);
+        intent.putExtra(INPUT_INGREDIENT5, inputFive);
+        intent.putExtra(INPUT_INGREDIENT6, inputSix);               // theoretisch: in for-Scheife packen, INGREDIENT durch i ersetzen, mmittels i.toString()  sollte doch funktionieren?!
+        intent.putExtra(INPUT_INGREDIENT7, inputSeven);
+        intent.putExtra(INPUT_INGREDIENT8, inputEight);
         startActivity(intent);
     }
 }

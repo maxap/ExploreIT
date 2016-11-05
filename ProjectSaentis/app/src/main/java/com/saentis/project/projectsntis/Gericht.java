@@ -21,10 +21,10 @@ public class Gericht extends RealmObject {
         ingredient2 = ing[1];
         ingredient3 = ing[2];
         ingredient4 = ing[3];
-//        ingredient5 = ing[4];
-//        ingredient6 = ing[5];
-//        ingredient7 = ing[6];
-//        ingredient8 = ing[7];
+        ingredient5 = ing[4];
+        ingredient6 = ing[5];
+        ingredient7 = ing[6];
+        ingredient8 = ing[7];
     }
 
     /*public void newIngredient(String ingredient) {
@@ -52,29 +52,22 @@ public class Gericht extends RealmObject {
         switch (ingredientindex) {
             case 0:
                 return ingredient1;
-
             case 1:
                 return ingredient2;
-
             case 2:
                 return ingredient3;
-
             case 3:
                 return ingredient4;
-
             case 4:
                 return ingredient5;
-
             case 5:
                 return ingredient6;
-
             case 6:
                 return ingredient7;
             case 7:
                 return ingredient8;
-
             default:
-                return " - DEFAULT in switch-case - ";
+                return "";
         }}
 
 }
