@@ -11,5 +11,3 @@ Die aktuelle .apk-Datei zur Installation auf Androidgeräten findet sich im [Rel
 
 
 
-
-_Entstanden im Rahmen des Explore IT XII der [SAP](http://go.sap.com/germany/index.html)._
